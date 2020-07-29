@@ -1,5 +1,25 @@
 # @keystonejs/api-tests
 
+## 6.0.2
+
+### Patch Changes
+
+- [`acaf19cd9`](https://github.com/keystonejs/keystone/commit/acaf19cd9679861234e67f9e130aea83d052f01e) [#3301](https://github.com/keystonejs/keystone/pull/3301) Thanks [@MadeByMike](https://github.com/MadeByMike)! - No functional changes. Update all internal usages of `keystone.createItems` to the new `createItems` function.
+
+* [`afe661e60`](https://github.com/keystonejs/keystone/commit/afe661e607539df13584d460e1016ba0fa883cb8) [#3274](https://github.com/keystonejs/keystone/pull/3274) Thanks [@jordanoverbye](https://github.com/jordanoverbye)! - Added the ability for static cache hints to be added to custom queries generated using `keystone.extendGraphQLSchema()`
+
+- [`50d33ddf9`](https://github.com/keystonejs/keystone/commit/50d33ddf937ae68b4a9ca7f0c0892637c5622b3d) [#3281](https://github.com/keystonejs/keystone/pull/3281) Thanks [@timleslie](https://github.com/timleslie)! - Updated tests to not depend on resolver order.
+
+- Updated dependencies [[`af5171563`](https://github.com/keystonejs/keystone/commit/af51715637433bcdd2538835c98ac71a8eb86122), [`271f1a40b`](https://github.com/keystonejs/keystone/commit/271f1a40b97e03aaa00ce920a6515b8f18669428), [`acaf19cd9`](https://github.com/keystonejs/keystone/commit/acaf19cd9679861234e67f9e130aea83d052f01e), [`7da9d67d7`](https://github.com/keystonejs/keystone/commit/7da9d67d7d481c44a81406c6b34540a3f0a8340d), [`afe661e60`](https://github.com/keystonejs/keystone/commit/afe661e607539df13584d460e1016ba0fa883cb8), [`ef7074977`](https://github.com/keystonejs/keystone/commit/ef70749775ce1565eafd7f94c3d7438c8ebd474e), [`e07c42d4e`](https://github.com/keystonejs/keystone/commit/e07c42d4ec75d5703bec4a2e419a42d18bed90ca), [`5a3849806`](https://github.com/keystonejs/keystone/commit/5a3849806d00e62b722461d02f6e4639bc45c1eb), [`24af20b38`](https://github.com/keystonejs/keystone/commit/24af20b38ab89a452edc7a060c9bc936cda55a4a), [`5332988e3`](https://github.com/keystonejs/keystone/commit/5332988e3fafe6a3594f7dcecd79a9402df28015), [`c3883e01c`](https://github.com/keystonejs/keystone/commit/c3883e01c01b83cf5938de9bebf2dd68f4861364), [`fd2b8d1cf`](https://github.com/keystonejs/keystone/commit/fd2b8d1cf0b23b177951d65006a0d0faf666a5d6)]:
+  - @keystonejs/fields@15.0.0
+  - @keystonejs/keystone@13.0.0
+  - @keystonejs/server-side-graphql-client@1.0.0
+  - @keystonejs/app-graphql@6.1.0
+  - @keystonejs/test-utils@7.1.1
+  - @keystonejs/auth-password@5.1.12
+  - @keystonejs/adapter-knex@11.0.1
+  - @keystonejs/adapter-mongoose@9.0.1
+
 ## 6.0.1
 
 ### Patch Changes

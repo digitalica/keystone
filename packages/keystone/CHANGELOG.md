@@ -1,5 +1,34 @@
 # @keystonejs/keystone
 
+## 13.0.0
+
+### Major Changes
+
+- [`af5171563`](https://github.com/keystonejs/keystone/commit/af51715637433bcdd2538835c98ac71a8eb86122) [#3283](https://github.com/keystonejs/keystone/pull/3283) Thanks [@timleslie](https://github.com/timleslie)! - Removed `BaseListAdapter.findFieldAdapterForQuerySegment()` and `MongoRelationshipInterface.supportsRelationshipQuery()`.
+
+* [`271f1a40b`](https://github.com/keystonejs/keystone/commit/271f1a40b97e03aaa00ce920a6515b8f18669428) [#3289](https://github.com/keystonejs/keystone/pull/3289) Thanks [@timleslie](https://github.com/timleslie)! - Removed `keystone.createHTTPContext()`.
+
+- [`e07c42d4e`](https://github.com/keystonejs/keystone/commit/e07c42d4ec75d5703bec4a2e419a42d18bed90ca) [#3288](https://github.com/keystonejs/keystone/pull/3288) Thanks [@timleslie](https://github.com/timleslie)! - Removed `keystone.registerSchema()`.
+
+### Minor Changes
+
+- [`afe661e60`](https://github.com/keystonejs/keystone/commit/afe661e607539df13584d460e1016ba0fa883cb8) [#3274](https://github.com/keystonejs/keystone/pull/3274) Thanks [@jordanoverbye](https://github.com/jordanoverbye)! - Added the ability for static cache hints to be added to custom queries generated using `keystone.extendGraphQLSchema()`
+
+* [`5a3849806`](https://github.com/keystonejs/keystone/commit/5a3849806d00e62b722461d02f6e4639bc45c1eb) [#3262](https://github.com/keystonejs/keystone/pull/3262) Thanks [@MadeByMike](https://github.com/MadeByMike)! - Added a new private internal schema that will allow a better method of bypassing access control on the `executeGraphQL` function.
+
+  The schema name `internal` is now a reserved name and if you have a schema with this name you will need to change it with this update.
+
+  Note: You cannot change access control on the `internal` schema.
+
+### Patch Changes
+
+- [`ef7074977`](https://github.com/keystonejs/keystone/commit/ef70749775ce1565eafd7f94c3d7438c8ebd474e) [#3282](https://github.com/keystonejs/keystone/pull/3282) Thanks [@timleslie](https://github.com/timleslie)! - Updated `BaseKeystoneAdapter` to pass `rels` to `._connect()`.
+
+- Updated dependencies [[`af5171563`](https://github.com/keystonejs/keystone/commit/af51715637433bcdd2538835c98ac71a8eb86122), [`7da9d67d7`](https://github.com/keystonejs/keystone/commit/7da9d67d7d481c44a81406c6b34540a3f0a8340d), [`5a3849806`](https://github.com/keystonejs/keystone/commit/5a3849806d00e62b722461d02f6e4639bc45c1eb), [`5332988e3`](https://github.com/keystonejs/keystone/commit/5332988e3fafe6a3594f7dcecd79a9402df28015), [`c3883e01c`](https://github.com/keystonejs/keystone/commit/c3883e01c01b83cf5938de9bebf2dd68f4861364), [`fd2b8d1cf`](https://github.com/keystonejs/keystone/commit/fd2b8d1cf0b23b177951d65006a0d0faf666a5d6)]:
+  - @keystonejs/fields@15.0.0
+  - @keystonejs/access-control@6.3.0
+  - @keystonejs/test-utils@7.1.1
+
 ## 12.0.0
 
 ### Major Changes
