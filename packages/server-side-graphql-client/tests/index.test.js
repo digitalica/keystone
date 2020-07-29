@@ -12,10 +12,7 @@ const {
   updateItems,
 } = require('../index');
 
-const testData = [
-  { data: { name: 'test', age: 30 } },
-  { data: { name: 'test2', age: 40 } },
-];
+const testData = [{ data: { name: 'test', age: 30 } }, { data: { name: 'test2', age: 40 } }];
 const schemaName = 'testing';
 
 const seedDb = ({ keystone }) =>
@@ -29,7 +26,7 @@ const seedDb = ({ keystone }) =>
 function setupKeystone(adapterName) {
   return setupServer({
     adapterName,
-    createLists: (keystone) => {
+    createLists: keystone => {
       keystone.createList('Test', {
         fields: {
           name: { type: Text },
@@ -85,7 +82,7 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
             context: keystone.createContext({ schemaName }),
           });
 
-          expect(allItems).toEqual(testData.map((x) => x.data));
+          expect(allItems).toEqual(testData.map(x => x.data));
         })
       );
     });
@@ -116,10 +113,7 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
           const items = await updateItems({
             keystone,
             listKey: 'Test',
-            items: seedItems.map((item, i) => ({
-              id: item.id,
-              data: { name: `update-${i}` },
-            })),
+            items: seedItems.map((item, i) => ({ id: item.id, data: { name: `update-${i}` } })),
             returnFields: 'name, age',
             context: keystone.createContext({ schemaName }),
           });
@@ -167,11 +161,11 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
             keystone,
             listKey: 'Test',
             returnFields: 'name age',
-            items: items.map((item) => item.id),
+            items: items.map(item => item.id),
             context: keystone.createContext({ schemaName }),
           });
 
-          expect(deletedItems).toEqual(testData.map((d) => d.data));
+          expect(deletedItems).toEqual(testData.map(d => d.data));
 
           // Get all the items back from db
           const allItems = await getItems({
@@ -198,7 +192,7 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
             context: keystone.createContext({ schemaName }),
           });
 
-          expect(allItems).toEqual(testData.map((x) => x.data));
+          expect(allItems).toEqual(testData.map(x => x.data));
         })
       );
       test(
